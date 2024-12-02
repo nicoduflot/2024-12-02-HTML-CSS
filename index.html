@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Formation HTML - CSS - RWD" />
+    <title>Formation HTML - CSS - RWD, &copy; DAWAN 2024</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <header>
+        <h1>Formation HTML - CSS - RWD</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./" target="_self" title="Lien vers la page d'accueil">Accueil</a></li>
+            <li><a href="./media.html" target="_self" title="Les media en html">Media</a></li>
+            <li><a href="./contact.html" target="_self" title="Les formulaires en html">Contact</a></li>
+            <li><a href="./grid.html" target="_self" title="Les grilles CSS">Grilles CSS</a></li>
+            <li><a href="./bootstrap.html" target="_self" title="Le framework css Bootstrap">Bootstrap</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <aside>
+                <b>Table des matières</b>
+                <ol type="I">
+                    <li><a href="#les-balises-de-contenu-texte">Les balises de contenu de texte</a></li>
+                    <li><a href="#les-balises-d-apparence-de-texte">Les balises d'apparence de texte</a></li>
+                    <li><a href="#les-problemes-courant-en-css">Les problèmes courant en css</a></li>
+                    <li><a href="#le-css-adaptatif">Le css adaptatif</a></li>
+                </ol>
+            </aside>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2 id="les-balises-de-contenu-texte">Les balises de contenu de texte</h2>
+                </header>
+                <h3>Écrire du contenu texte</h3>
+                <p>
+                    Les textes doivent toujours être encadrés par des balise qui affiche normalement du texte, comme des paragraphes, mais aussi des block de citation, des listes...
+                </p>
+                <p>
+                    Si j'enchaîne les paragraphes, ils sont séparés verticalement par leurs marges extérieures en haut et en bas.<br /> Pour ajouter un retour chariot (ou une cassure de ligne), il faut utiliser la balise <code>&lt;br /&gt;</code>
+                </p>
+                <p>
+                    Les listes sont équivalentes aux paragagraphes, car on ne peut pas les déclarer à l'intérieur d'un paragraphe.
+                </p>
+                <ul>
+                    <li>élément de liste</li>
+                    <li>élément de liste
+                        <ul>
+                            <li>élément de sous-liste</li>
+                            <li>élément de sous-liste</li>
+                            <li>élément de sous-liste
+                                <ul>
+                                    <li>élément de sous-sous-liste</li>
+                                    <li>élément de sous-sous-liste</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>élément de liste</li>
+                </ul>
+                <ol type="A">
+                    <li>élémént de liste</li>
+                    <li>élémént de liste
+                        <ol>
+                            <li>élément de sous-liste</li>
+                        </ol>
+                    </li>
+                    <li>élémént de liste</li>
+                </ol>
+                <p>
+                    maintenant blablabla, continuons la liste
+                </p>
+                <ol type="A" start="4">
+                    <li>élément de liste</li>
+                </ol>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy; Dawan 2024
+    </footer>
+</body>
+</html>
