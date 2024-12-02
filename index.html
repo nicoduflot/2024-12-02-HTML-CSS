@@ -115,7 +115,40 @@ adipisicing elit.
                     </tr>
                 </table>
             </article>
-            
+            <article>
+                <header>
+                    <h2 id="les-balises-d-apparence-de-texte">Les balises d'apparence de texte</h2>
+                </header>
+                <p>
+                    La balise <code>font</code> permettait de faire ressortir un extrait d'un paragraphe, en changeant soit <font face="Impact">la police de caratère utilisée</font>, <font size="6">la taille de la police</font>, et sa <font color="#0000ff">couleur d'écriture</font>, en <font face="Impact" size="6" color="#0000ff">pouvant tout cumuler</font>, elle est désormais déprécié, mais est encore interprêtée par la plupart des navigateurs.                    
+                </p>
+                <style>
+                    .rouge-gras{
+                        font-weight: bold;
+                        color: red;
+                    }
+                </style>
+                <p>
+                    On utilisera plutôt une classe CSS associée à une balise <code>span</code>. <span class="rouge-gras">Rouge gras</span> utilise une span et la classe .rouge-gras
+                </p>
+                <p>
+                    Une surface de 45m<sup>2</sup>, pour un volume de 250m<sup>3</sup>.<br />
+                    Les user stories doivent être INVEST.<sub>abbrev.</sub><br />
+                    H<sup>2</sup>SO<sub>4</sub><sup>2-</sup>
+                </p>
+                <p>
+                    Il est possible de réduire la taille d'un espace de texte sans utiliser la balise <small>font</small>
+                </p>
+                <p>
+                    Pour mettre en gras un élément, on utilise la balise <code><b>b</b></code> (qui n'a aucun impact sur le SEO), mais la plupart des CMS, utiliseront la balise <code><strong>strong</strong></code> qui elle a un impacte SEO, insistant sur la valeur sémantique du terme par rapport au contexte.
+                </p>
+                <p>
+                    Il en est de même pour l'italique <code><i>i</i></code>, qui de base n'ajoute pas d'important au SEO, elle sera par défaut remplacée par <code><em>em</em></code> (emphase) dans les CMS, et <code>em</code> ajoute de l'important en SEO.
+                </p>
+                <p>
+                    Comme le HTML était destiné à l'impression en direct, il était possible de <u>souligner</u> du texte, mais en pratique on ne le fait pas, car par défaut les liens sont souligner et on pour croire qu'un texte souligné est un lien qui ne fonctionne pas. Il est aussi possible de <s>biffer</s>, ou <mark>surligner au marqueur fluo</mark>.
+                </p>
+            </article>
         </section>
     </main>
     <footer>
