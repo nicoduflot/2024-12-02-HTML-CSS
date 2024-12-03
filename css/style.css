@@ -29,54 +29,208 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage du site)
             si la largeur d'affichage du site 360px (100vw)
             50vw = 180px
 
+sélecteur CSS :
+    ATTENTION : en CSS, on impacte tous les éléments correspondants aux sélecteurs écrits
+    
+    sélecteurs simples : balise, identifiant et par classe
+        p                   => tous les éléments p rencontrés dans le document
+                            pas de caractère spécial devant l'élément donc il s'agit d'une balise
+        #special            => l'élément ayant comme attribut id="special"
+                            le caractère # indique qu'on se réfère à l'id
+                            #Les-balises-de-contenu-texte{}
+                            => les id sont uniques dans la page
+        .titreDeChapitre    => les éléments ayant au moins la class="titreDeChapitre" 
+                            le caractère . indique qu'on se réfère à une classe
+                            => ATTENTION : si un élément class="titreDeChapitre toto tata" comme il possède au moins
+                            la classe titreDeChapitre alors il sera trouvé
+    Sélecteur avancés : selon les attributs                                  
+        [data-test]                     => les éléments ayant au moins un attribut nommé data-test
+                                        <span data-test="tata"></span>
+                                        <span data-test="toto"></span>
+                                        => les deux sont impacté, on ne recherche que l'attribut
+        [alt]                           => les éléments ayant au moins un attribut alt
+        [data-test="toto"]              => les éléments ayant au moins un attribut nommé data-test="toto"
+                                        <span data-test="tata"></span> => ça ne marche pas, la valeur de test est tata
+                                        <span data-test="toto"></span> => ça fonctionne car la valeur de test et toto
+                                        seul l'élément dont l'attribut data-test est égal à toto sera impacté
+        [data-col][data-line]           => les éléments ayant au moins un attribut data-col ET un attribut data-line
+        [data-col="3"][data-line]       => les éléments ayant au moins un attribut data-col="3" ET un attribut data-line
+        [data-col][data-line="2"]       => les éléments ayant au moins un attribut data-col ET un attribut data-line="2"
+        [data-col="3"][data-line="2"]   => les éléments ayant au moins un attribut data-col="3" ET un attribut data-line="2"
+
+    Sélecteur avancés : mélange des sélecteurs simples et ou de sélecteurs avancés
+
+        h3.titreDeChapitre  => tous les titre h3 ayant la classe titreDeChapitre <h3 class="titreDeChapitre"></h3>
+                            si l'élément et la classe sont collés, c'est que l'élément doit avoir au moins cette classe
+        article #special    => un élément avec id="special" enfant direct OU indirect d'un élément article
+                            si l'élément et l'id recherché sont séparés, cela indique une filiation directe ou indirecte
+                            <article>
+                                <div>
+                                    <div id="special"></div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <div id="special"></div>
+                            </article>
+
+                            <article>
+                                <div>
+                                    <div>
+                                        <div id="special"></div>
+                                    </div>
+                                </div>
+                            </article>
+
+        article > p            => tous les éléments p enfants directs d'un élément article
+                            le chevron fermant > entre les deux éléments indique une filiation directe.
+                            <article>
+                                <p>P est lenfant direct de article, ça marche</p>
+                            </article>
+
+                            /!\ ça ne marche pas : 
+                            <article>
+                                <div>
+                                    <p>p a au moins une balise entre lui et article : ça ne marche pas</p>
+                                </div>
+                            </article>
+        p#special           => un élément p avec id="special"
+        .toto.tata          => un élément ayant au moins les deux classes suivantes toto et tata
+        .toto .tata         => un élément ayant au moins la classe tata enfant direct ou indirect d'un élément ayant au moins la classe toto
+    
+    
+    Pseudo sélecteurs (sélécteur qui permet des "tri" ou des "filtres" sur des sélecteurs )
+
+        p:nth-of-type(odd)  => tous les paragraphes du document en position impaire
+                            nth-child() le(s) nième(s) enfant(s)
+                            les paramètres : 
+                                odd => impaire - event => paire, Xn => tous les X enfants , Y => le Yème
+                                Xn + Y, si X == 2 et Y == 1 ==> 2n+1
+
+        article:last-child:nth-of-type(4n+3)    => l'article doit être le dernier article et le troisième article d'une ligne de 4
+                                                paramètres :    4n => le nombre d'élément par ligne
+                                                                +3 => le troisième de la ligne
+
 */
 
 /* Déclarations CSS générales */
 
-:root{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.8rem;
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  --gutter-x: 0.5rem;
+  --gutter-y: var(--gutter-x);
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6{
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 /* Déclaration de classes */
 
-.deuxEm{
-    font-size: 2em;
+.deuxEm {
+  font-size: 2em;
 }
 
-.deuxRem{
-    font-size: 2rem;
+.deuxRem {
+  font-size: 2rem;
 }
 
-.content-box{
-    box-sizing: content-box;
-    width: 200px;
-    border: 6px double black;
-    padding: 1rem;
+.content-box {
+  box-sizing: content-box;
+  width: 200px;
+  border: 6px double black;
+  padding: 1rem;
 }
 
-.border-box{
-    box-sizing: border-box;
-    width: 200px;
-    border: 6px double black;
-    padding: 1rem;
+.border-box {
+  box-sizing: border-box;
+  width: 200px;
+  border: 6px double black;
+  padding: 1rem;
 }
 
-/* Décalaration de structure */
+/* Déclaration de structure */
 
-
+body > header,
+body > nav,
+body > main,
+body > footer {
+  width: 100%;
+  padding-left: var(--gutter-x);
+  padding-right: var(--gutter-x);
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Déclarations adaptatives */
+@media (min-width: 576px) {
+  body > header,
+  body > nav,
+  body > main,
+  body > footer {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  body > header,
+  body > nav,
+  body > main,
+  body > footer {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  body > header,
+  body > nav,
+  body > main,
+  body > footer {
+    max-width: 960px;
+  }
+
+  main section{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  main section > article{
+    margin: var(--gutter-x);
+    width: calc(50% - (2 * var(--gutter-x)));
+  }
+}
+@media (min-width: 1200px) {
+  body > header,
+  body > nav,
+  body > main,
+  body > footer {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  body > header,
+  body > nav,
+  body > main,
+  body > footer {
+    max-width: 1320px;
+  }
+
+  main section > article{
+    width: calc(33% - (2 * var(--gutter-x)));
+  }
+}

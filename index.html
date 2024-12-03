@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./css/style.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
 </head>
+
 <body>
     <header>
         <h1>Formation HTML - CSS - RWD</h1>
@@ -40,13 +42,17 @@
                 </header>
                 <h3>Écrire du contenu texte</h3>
                 <p>
-                    Les textes doivent toujours être encadrés par des balise qui affiche normalement du texte, comme des paragraphes, mais aussi des block de citation, des listes...
+                    Les textes doivent toujours être encadrés par des balise qui affiche normalement du texte, comme des
+                    paragraphes, mais aussi des block de citation, des listes...
                 </p>
                 <p>
-                    Si j'enchaîne les paragraphes, ils sont séparés verticalement par leurs marges extérieures en haut et en bas.<br /> Pour ajouter un retour chariot (ou une cassure de ligne), il faut utiliser la balise <code>&lt;br /&gt;</code>
+                    Si j'enchaîne les paragraphes, ils sont séparés verticalement par leurs marges extérieures en haut
+                    et en bas.<br /> Pour ajouter un retour chariot (ou une cassure de ligne), il faut utiliser la
+                    balise <code>&lt;br /&gt;</code>
                 </p>
                 <p>
-                    Les listes sont équivalentes aux paragagraphes, car on ne peut pas les déclarer à l'intérieur d'un paragraphe.
+                    Les listes sont équivalentes aux paragagraphes, car on ne peut pas les déclarer à l'intérieur d'un
+                    paragraphe.
                 </p>
                 <ul>
                     <li>élément de liste</li>
@@ -85,11 +91,14 @@
                     </p>
                 </blockquote>
                 <p>
-                    Pour ajouter de la sémantique à une citation, il est conseillé d'utiliser des balise de citation : <code>cite</code> et <code>q</code>
+                    Pour ajouter de la sémantique à une citation, il est conseillé d'utiliser des balise de citation :
+                    <code>cite</code> et <code>q</code>
                 </p>
                 <blockquote>
                     <p>
-                        <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à outils de la communication.</q>
+                        <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés
+                            deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à
+                            outils de la communication.</q>
                     </p>
                     <p>
                         <cite>Au guet ! (1989), Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997</cite>
@@ -121,16 +130,21 @@ adipisicing elit.
                     <h2 id="les-balises-d-apparence-de-texte">Les balises d'apparence de texte</h2>
                 </header>
                 <p>
-                    La balise <code>font</code> permettait de faire ressortir un extrait d'un paragraphe, en changeant soit <font face="Impact">la police de caratère utilisée</font>, <font size="6">la taille de la police</font>, et sa <font color="#0000ff">couleur d'écriture</font>, en <font face="Impact" size="6" color="#0000ff">pouvant tout cumuler</font>, elle est désormais déprécié, mais est encore interprêtée par la plupart des navigateurs.                    
+                    La balise <code>font</code> permettait de faire ressortir un extrait d'un paragraphe, en changeant
+                    soit <font face="Impact">la police de caratère utilisée</font>, <font size="6">la taille de la
+                        police</font>, et sa <font color="#0000ff">couleur d'écriture</font>, en <font face="Impact"
+                        size="6" color="#0000ff">pouvant tout cumuler</font>, elle est désormais déprécié, mais est
+                    encore interprêtée par la plupart des navigateurs.
                 </p>
                 <style>
-                    .rouge-gras{
+                    .rouge-gras {
                         font-weight: bold;
                         color: red;
                     }
                 </style>
                 <p>
-                    On utilisera plutôt une classe CSS associée à une balise <code>span</code>. <span class="rouge-gras">Rouge gras</span> utilise une span et la classe .rouge-gras
+                    On utilisera plutôt une classe CSS associée à une balise <code>span</code>. <span
+                        class="rouge-gras">Rouge gras</span> utilise une span et la classe .rouge-gras
                 </p>
                 <p>
                     Une surface de 45m<sup>2</sup>, pour un volume de 250m<sup>3</sup>.<br />
@@ -138,16 +152,24 @@ adipisicing elit.
                     H<sup>2</sup>SO<sub>4</sub><sup>2-</sup>
                 </p>
                 <p>
-                    Il est possible de réduire la taille d'un espace de texte sans utiliser la balise <small>font</small>
+                    Il est possible de réduire la taille d'un espace de texte sans utiliser la balise
+                    <small>font</small>
                 </p>
                 <p>
-                    Pour mettre en gras un élément, on utilise la balise <code><b>b</b></code> (qui n'a aucun impact sur le SEO), mais la plupart des CMS, utiliseront la balise <code><strong>strong</strong></code> qui elle a un impacte SEO, insistant sur la valeur sémantique du terme par rapport au contexte.
+                    Pour mettre en gras un élément, on utilise la balise <code><b>b</b></code> (qui n'a aucun impact sur
+                    le SEO), mais la plupart des CMS, utiliseront la balise <code><strong>strong</strong></code> qui
+                    elle a un impacte SEO, insistant sur la valeur sémantique du terme par rapport au contexte.
                 </p>
                 <p>
-                    Il en est de même pour l'italique <code><i>i</i></code>, qui de base n'ajoute pas d'important au SEO, elle sera par défaut remplacée par <code><em>em</em></code> (emphase) dans les CMS, et <code>em</code> ajoute de l'important en SEO.
+                    Il en est de même pour l'italique <code><i>i</i></code>, qui de base n'ajoute pas d'important au
+                    SEO, elle sera par défaut remplacée par <code><em>em</em></code> (emphase) dans les CMS, et
+                    <code>em</code> ajoute de l'important en SEO.
                 </p>
                 <p>
-                    Comme le HTML était destiné à l'impression en direct, il était possible de <u>souligner</u> du texte, mais en pratique on ne le fait pas, car par défaut les liens sont souligner et on pour croire qu'un texte souligné est un lien qui ne fonctionne pas. Il est aussi possible de <s>biffer</s>, ou <mark>surligner au marqueur fluo</mark>.
+                    Comme le HTML était destiné à l'impression en direct, il était possible de <u>souligner</u> du
+                    texte, mais en pratique on ne le fait pas, car par défaut les liens sont souligner et on pour croire
+                    qu'un texte souligné est un lien qui ne fonctionne pas. Il est aussi possible de <s>biffer</s>, ou
+                    <mark>surligner au marqueur fluo</mark>.
                 </p>
             </article>
             <article>
@@ -156,10 +178,13 @@ adipisicing elit.
                 </header>
                 <h3>Les polices a empatement</h3>
                 <p>
-                    En web, pour l'accessibilité et la facilité de lecture, on évite les polices dites <q>à empatement</q> (Times New Roman, verdana, serif) on préfèrera les polices sans empatement, car plus faciles à lire surtout sur des écrans (Arial, helvetica, Roboto ou sans-serif).
+                    En web, pour l'accessibilité et la facilité de lecture, on évite les polices dites <q>à
+                        empatement</q> (Times New Roman, verdana, serif) on préfèrera les polices sans empatement, car
+                    plus faciles à lire surtout sur des écrans (Arial, helvetica, Roboto ou sans-serif).
                 </p>
                 <p>
-                    De plus, pour rendre les texte encore plus accessibles, il convient d'augmenter la taille de base de la police de caractère et d'augmenter l'interligne.
+                    De plus, pour rendre les texte encore plus accessibles, il convient d'augmenter la taille de base de
+                    la police de caractère et d'augmenter l'interligne.
                 </p>
                 <div class="deuxEm">
                     deux em
@@ -175,93 +200,97 @@ adipisicing elit.
                 </div>
                 <h3>Les tailles des boîtes</h3>
                 <div class="content-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam repudiandae voluptas eveniet sed quidem sequi quae magnam rerum et quis vero harum architecto, quos quas. Dolorem amet odio non!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam repudiandae voluptas eveniet
+                    sed quidem sequi quae magnam rerum et quis vero harum architecto, quos quas. Dolorem amet odio non!
                 </div>
                 <div class="border-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam repudiandae voluptas eveniet sed quidem sequi quae magnam rerum et quis vero harum architecto, quos quas. Dolorem amet odio non!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam repudiandae voluptas eveniet
+                    sed quidem sequi quae magnam rerum et quis vero harum architecto, quos quas. Dolorem amet odio non!
                 </div>
 
             </article>
-            <article>
-                <header>
-                    <h2 id="le-css-adaptatif">Le css adaptatif</h2>
-                </header>
-                <h3>Les media queries</h3>
-                <p>
-                    Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre
-                    autres, à l'affichage du site sur l'appareil.
-                </p>
-                <h3>La flexibilité : display: flex;</h3>
-                <p>
-                    Exemple d'utilisation
-                </p>
-                <style>
-                    /* css exemple display:flex; */
-                    .exemple-display-flex{
-                        border: 1px solid black;
-                        margin: 1rem;
-                        display: flex;
-                        flex-wrap: wrap;
-                        --font: 'calibri';
-                        /* pour harmoniser le css et faciliter la maintenance, il est pratique d'utiliser des variables */
-                        --gutter: 0.25rem;
-                        /* le contenu de la variable est appelé grace à la fonction var() */
-                        padding: var(--gutter);
-                        justify-content:space-between;
-                    }
+        </section>
+        <article>
+            <header>
+                <h2 id="le-css-adaptatif">Le css adaptatif</h2>
+            </header>
+            <h3>Les media queries</h3>
+            <p>
+                Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre
+                autres, à l'affichage du site sur l'appareil.
+            </p>
+            <h3>La flexibilité : display: flex;</h3>
+            <p>
+                Exemple d'utilisation
+            </p>
+            <style>
+                /* css exemple display:flex; */
+                .exemple-display-flex {
+                    border: 1px solid black;
+                    margin: 1rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    --font: 'calibri';
+                    /* pour harmoniser le css et faciliter la maintenance, il est pratique d'utiliser des variables */
+                    --gutter: 0.25rem;
+                    /* le contenu de la variable est appelé grace à la fonction var() */
+                    padding: var(--gutter);
+                    justify-content: space-between;
+                }
 
-                    .div-flex{
-                        border: 1px solid black;
-                        font-family: var(--font);
-                        height: 75px;
-                        width: 100%;
-                        margin: var(--gutter);
-                    }
-                    /* 
+                .div-flex {
+                    border: 1px solid black;
+                    font-family: var(--font);
+                    height: 75px;
+                    width: 100%;
+                    margin: var(--gutter);
+                }
+
+                /* 
                     avec les media queries, je peux dire que quand l'affichage de l'écran atteint ou dépasse 
                     une certaine largeur, je peux changer la  largeur de certains éléments
                     */
-                    @media(min-width: 700px){
-                        .div-flex{
-                            width: calc(50% - (2 * var(--gutter)));
-                        }
+                @media(min-width: 700px) {
+                    .div-flex {
+                        width: calc(50% - (2 * var(--gutter)));
                     }
-                    
-                    @media(min-width: 1000px){
-                        .div-flex{
-                            width: calc(33% - (2 * var(--gutter)));
-                        }
+                }
+
+                @media(min-width: 1000px) {
+                    .div-flex {
+                        width: calc(33% - (2 * var(--gutter)));
                     }
-                    
-                    @media(min-width: 1200px){
-                        .div-flex{
-                            width: calc(25% - (2 * var(--gutter)));
-                        }
+                }
+
+                @media(min-width: 1200px) {
+                    .div-flex {
+                        width: calc(25% - (2 * var(--gutter)));
                     }
-                </style>
-                <div class="exemple-display-flex">
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                </div>
-            </article>
-        </section>
+                }
+            </style>
+            <div class="exemple-display-flex">
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+                <div class="div-flex">toto</div>
+            </div>
+        </article>
     </main>
     <footer>
         &copy; Dawan 2024
     </footer>
 </body>
+
 </html>
