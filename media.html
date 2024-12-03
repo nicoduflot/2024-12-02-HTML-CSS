@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
     <title>Formation HTML - CSS - RWD, &copy; DAWAN 2024</title>
     <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
     <header>
         <span class="h1">Formation HTML - CSS - RWD</span>
@@ -31,32 +33,47 @@
             </p>
             <h3>img</h3>
             <p>
-                img est une balise qui va chercher la source (image) là où elle est stockée (selon le chemin indiqué dans l'attribut <code>src</code>) et elle affiche cette source là où img est déclaré (écrite, placée sur la page). <img src="./images/james-white-composite-200w.png" alt="Image composite d'oeuvres de James White" title="Mini galerie des oeuvres de James WHite, graphiste au style synthwave, disponibles sur son site signalnoise" /> on voit qu'une image est en display inline, c'est à dire qu'elle suivra le flux de contenu précédent et suivant, surtout si elle est, comme ici, intégrée dans un paragraphe.
+                img est une balise qui va chercher la source (image) là où elle est stockée (selon le chemin indiqué
+                dans l'attribut <code>src</code>) et elle affiche cette source là où img est déclaré (écrite, placée sur
+                la page). <img src="./images/james-white-composite-200w.png"
+                    alt="Image composite d'oeuvres de James White"
+                    title="Mini galerie des oeuvres de James WHite, graphiste au style synthwave, disponibles sur son site signalnoise" />
+                on voit qu'une image est en display inline, c'est à dire qu'elle suivra le flux de contenu précédent et
+                suivant, surtout si elle est, comme ici, intégrée dans un paragraphe.
             </p>
             <p>
                 img peut être donc déclarer dans et hors paragraphe.
             </p>
-            <img src="./images/doc-signal-200w.png" alt="Portrait du personnage Doc Brown dans le style synthwave par James White" /> <img src="./images/doc-signal-200w.png"  alt="Portrait du personnage Doc Brown dans le style synthwave par James White" />
+            <img src="./images/doc-signal-200w.png"
+                alt="Portrait du personnage Doc Brown dans le style synthwave par James White" /> <img
+                src="./images/doc-signal-200w.png"
+                alt="Portrait du personnage Doc Brown dans le style synthwave par James White" />
             <p>
-                <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" alt="Image fond d'écran inspiration jeu fallout 4" /><br />
+                <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg"
+                    alt="Image fond d'écran inspiration jeu fallout 4" /><br />
                 <span class="legende">Image fond d'écran inspiration jeu fallout 4</span>
             </p>
             <p>
                 L'exemple précédent d'image légendée est MAUVAIS !
-                Une balise conteneur, spécialement créée pour le contenu de type flux (images, audio, vidéo...) existe et possède de quoi ajouter une légende : <code>figure</code>. Figure permet d'associer sémantiquement le contenu de type flux et sa légende en une seule entité SEO.
+                Une balise conteneur, spécialement créée pour le contenu de type flux (images, audio, vidéo...) existe
+                et possède de quoi ajouter une légende : <code>figure</code>. Figure permet d'associer sémantiquement le
+                contenu de type flux et sa légende en une seule entité SEO.
             </p>
             <figure>
-                <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" alt="Image fond d'écran inspiration jeu fallout 4" />
+                <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg"
+                    alt="Image fond d'écran inspiration jeu fallout 4" />
                 <figcaption>
                     Image fond d'écran inspiration jeu fallout 4
                 </figcaption>
             </figure>
             <p>
-                La légende sera rattachée sémantiquement à l'image et son texte alternatif, ce qui améliorera le référencement ainsi que l'accessibilité.
+                La légende sera rattachée sémantiquement à l'image et son texte alternatif, ce qui améliorera le
+                référencement ainsi que l'accessibilité.
             </p>
             <h3>Picture</h3>
             <p>
-                La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible autour de l'image affichée, on peut sélectionner la même image avec des formats différents.
+                La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible autour
+                de l'image affichée, on peut sélectionner la même image avec des formats différents.
             </p>
             <picture>
                 <source srcset="./images/james-white-composite-800w.png" media="(min-width: 820px)" />
@@ -73,10 +90,16 @@
                     <h3>L'audio hébergé sur le site</h3>
                 </header>
                 <p>
-                    Pour accéder et lire un fichier audio hébergé sur le site, il faut utiliser la balise <code>audio</code>.<br />
-                    Cette balise peut soit avoir l'attirbut src pour aller chercher le fichier audio, soit utiliser une blise <code>source</code><br />
-                    Utiliser plusieurs sources, dans le cas de l'audio, permet de s'adapter à la configuration et la bande-passante de l'utilisateur. Un appareil, pour lire des fichier audio ou vidéo, à besoin de "codecs", des fichier qui permettent à un système de décrypter une source et dans notre cas de la faire entendre.<br />
-                    Si un des fichiers est en erreur, l'appareil pourra sélectionner la source qu'il sait jouer et qui n'est pas en erreur.
+                    Pour accéder et lire un fichier audio hébergé sur le site, il faut utiliser la balise
+                    <code>audio</code>.<br />
+                    Cette balise peut soit avoir l'attirbut src pour aller chercher le fichier audio, soit utiliser une
+                    blise <code>source</code><br />
+                    Utiliser plusieurs sources, dans le cas de l'audio, permet de s'adapter à la configuration et la
+                    bande-passante de l'utilisateur. Un appareil, pour lire des fichier audio ou vidéo, à besoin de
+                    "codecs", des fichier qui permettent à un système de décrypter une source et dans notre cas de la
+                    faire entendre.<br />
+                    Si un des fichiers est en erreur, l'appareil pourra sélectionner la source qu'il sait jouer et qui
+                    n'est pas en erreur.
                 </p>
                 <figure>
                     <audio id="lecteur" controls>
@@ -86,7 +109,7 @@
                     <figcaption>
                         <button id="playAudio" data-target="lecteur" style="font-size: 2rem;">
                             <i class="bi bi-play-btn-fill"></i>
-                        </button> 
+                        </button>
                         <button id="pauseAudio" data-target="lecteur" style="font-size: 2rem;">
                             <i class="bi bi-pause-btn-fill"></i>
                         </button>
@@ -94,15 +117,99 @@
                     <script>
                         const play = document.getElementById('playAudio');
                         const pause = document.getElementById('pauseAudio');
-                        play.addEventListener('click', function(){
+                        play.addEventListener('click', function () {
                             document.getElementById(play.dataset.target).play();
                         });
-                        
-                        pause.addEventListener('click', function(){
+
+                        pause.addEventListener('click', function () {
                             document.getElementById(play.dataset.target).pause();
                         });
                     </script>
                 </figure>
+            </article>
+            <article>
+                <header>
+                    <h3>L'audio hébergé sur un site tier</h3>
+                </header>
+                <p>
+                    Les media audio, hébergés sur des site qui permettent le partage de contenu audiosur son propre site
+                    et / ou espace de réseau social le fond grâce à l'utilisation de la balise <code>iframe</code>.
+                </p>
+                <p>
+                    L'iframe permet de créer au sein d'une page html, un cadre qui permet d'appeler un autre document,
+                    par exemple, de l'audio, un fichier txt, du xml et donc des page html du même site ou d'autres
+                    sites.
+                </p>
+                <ul>
+                    <li><a href="./documents/CRAM.pdf" target="docs">CRAM</a></li>
+                    <li><a href="./documents/fichier.txt" target="docs">TXT</a></li>
+                    <li><a href="./documents/books.xml" target="docs">XML</a></li>
+                    <li><a href="./documents/PP3.pdf" target="docs">PP3</a></li>
+                    <li><a href="./media/audio/diablo_town.mp3" target="docs">MP3</a></li>
+                    <li><a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1571444557&color=%23e82179&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                            target="docs">Lizzo</a></li>
+                </ul>
+                <iframe name="docs" width="90%" height="200px" src="./documents/CRAM.pdf"></iframe>
+                <h4>Exemple audio intégrer avec bandcamp</h4>
+                <iframe style="border: 0; width: 100%; height: 340px;"
+                    src="https://bandcamp.com/EmbeddedPlayer/album=3828771716/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/"
+                    seamless><a href="https://weswaltz.bandcamp.com/album/more-is-more">More Is More de Wes
+                        Waltz</a></iframe>
+                <h4>Exemple avec soundcloud</h4>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1571444557&color=%23e82179&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                <div
+                    style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                    <a href="https://soundcloud.com/lizzomusic" title="Lizzo" target="_blank"
+                        style="color: #cccccc; text-decoration: none;">Lizzo</a> · <a
+                        href="https://soundcloud.com/lizzomusic/pink" title="Pink" target="_blank"
+                        style="color: #cccccc; text-decoration: none;">Pink</a></div>
+            </article>
+        </section>
+        <section>
+            <header>
+                <h2>La vidéo</h2>
+            </header>
+            <article>
+                <header>
+                    <h3>Vidéo hébergée sur le site</h3>
+                </header>
+                <h4>Vidéo avec une seule source</h4>
+                <figure>
+                    <video src="./media/video/Fallout-4-Launch-Trailer.mp4" controls muted
+                        poster="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg"></video>
+                </figure>
+                <h4>vidéo avec plusieurs sources</h4>
+                <figure>
+                    <video controls muted>
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                    </video>
+                </figure>
+            </article>
+            <article>
+                <header>
+                    <h3>Vidéo hébergée sur un site tier</h3>
+                </header>
+                <p>
+                    Elle sont partagées sur le même principe que pour le son hébergé sur un autre site
+                </p>
+                <h4>Youtube, le mauvais élève</h4>
+                <iframe width="300" height="168" src="https://www.youtube.com/embed/ScaWF4gEK3c?si=-JQU8z9nwfzTvVed"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h4>Dailymotion, le sauveur adaptatif</h4>
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                    <iframe src="https://geo.dailymotion.com/player.html?video=x289bz"
+                        style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden; border:none;"
+                        allowfullscreen title="Dailymotion Video Player" allow="web-share">
+                    </iframe>
+                </div>
+                <h5>Adapter le css en balise de Dailymotion</h5>
+                <div class="video-16-9">
+                    <iframe src="https://www.youtube.com/embed/ScaWF4gEK3c?si=-JQU8z9nwfzTvVed"></iframe>
+                </div>
             </article>
         </section>
     </main>
@@ -115,4 +222,5 @@
         </a>
     </div>
 </body>
+
 </html>
