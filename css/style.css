@@ -113,6 +113,13 @@ sélecteur CSS :
 
 */
 
+/* 
+il est possible d'importer d'autres feuillets CSS à l'interieur d'un feuillet css 
+l'importation peut se faire après du commentaire MAIS AVANT TOUTES DÉCLARATIONS CSS
+*/
+
+@import url('./bootstrap-icons.css');
+
 /* Déclarations CSS générales */
 
 :root {
@@ -162,6 +169,14 @@ h6 {
   width: 200px;
   border: 6px double black;
   padding: 1rem;
+}
+
+.go-top{
+    font-size: 2rem;
+    opacity: 0.5;
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
 }
 
 /* Déclaration de structure */
