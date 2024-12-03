@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Formation HTML - CSS - RWD</h1>
+        <span class="h1">Formation HTML - CSS - RWD</span>
     </header>
     <nav>
         <ul>
@@ -21,7 +21,90 @@
         </ul>
     </nav>
     <main>
-
+        <header>
+            <h1>Les media</h1>
+        </header>
+        <article>
+            <h2>Les images</h2>
+            <p>
+                Les images peuvent être affichées à l'aide de la balise <code>img</code> ET <code>picture</code>
+            </p>
+            <h3>img</h3>
+            <p>
+                img est une balise qui va chercher la source (image) là où elle est stockée (selon le chemin indiqué dans l'attribut <code>src</code>) et elle affiche cette source là où img est déclaré (écrite, placée sur la page). <img src="./images/james-white-composite-200w.png" alt="Image composite d'oeuvres de James White" title="Mini galerie des oeuvres de James WHite, graphiste au style synthwave, disponibles sur son site signalnoise" /> on voit qu'une image est en display inline, c'est à dire qu'elle suivra le flux de contenu précédent et suivant, surtout si elle est, comme ici, intégrée dans un paragraphe.
+            </p>
+            <p>
+                img peut être donc déclarer dans et hors paragraphe.
+            </p>
+            <img src="./images/doc-signal-200w.png" alt="Portrait du personnage Doc Brown dans le style synthwave par James White" /> <img src="./images/doc-signal-200w.png"  alt="Portrait du personnage Doc Brown dans le style synthwave par James White" />
+            <p>
+                <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" alt="Image fond d'écran inspiration jeu fallout 4" /><br />
+                <span class="legende">Image fond d'écran inspiration jeu fallout 4</span>
+            </p>
+            <p>
+                L'exemple précédent d'image légendée est MAUVAIS !
+                Une balise conteneur, spécialement créée pour le contenu de type flux (images, audio, vidéo...) existe et possède de quoi ajouter une légende : <code>figure</code>. Figure permet d'associer sémantiquement le contenu de type flux et sa légende en une seule entité SEO.
+            </p>
+            <figure>
+                <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" alt="Image fond d'écran inspiration jeu fallout 4" />
+                <figcaption>
+                    Image fond d'écran inspiration jeu fallout 4
+                </figcaption>
+            </figure>
+            <p>
+                La légende sera rattachée sémantiquement à l'image et son texte alternatif, ce qui améliorera le référencement ainsi que l'accessibilité.
+            </p>
+            <h3>Picture</h3>
+            <p>
+                La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible autour de l'image affichée, on peut sélectionner la même image avec des formats différents.
+            </p>
+            <picture>
+                <source srcset="./images/james-white-composite-800w.png" media="(min-width: 820px)" />
+                <source srcset="./images/james-white-composite-400w.png" media="(min-width: 420px)" />
+                <img src="./images/james-white-composite-200w.png" />
+            </picture>
+        </article>
+        <section>
+            <header>
+                <h2>L'audio</h2>
+            </header>
+            <article>
+                <header>
+                    <h3>L'audio hébergé sur le site</h3>
+                </header>
+                <p>
+                    Pour accéder et lire un fichier audio hébergé sur le site, il faut utiliser la balise <code>audio</code>.<br />
+                    Cette balise peut soit avoir l'attirbut src pour aller chercher le fichier audio, soit utiliser une blise <code>source</code><br />
+                    Utiliser plusieurs sources, dans le cas de l'audio, permet de s'adapter à la configuration et la bande-passante de l'utilisateur. Un appareil, pour lire des fichier audio ou vidéo, à besoin de "codecs", des fichier qui permettent à un système de décrypter une source et dans notre cas de la faire entendre.<br />
+                    Si un des fichiers est en erreur, l'appareil pourra sélectionner la source qu'il sait jouer et qui n'est pas en erreur.
+                </p>
+                <figure>
+                    <audio id="lecteur" controls>
+                        <source src="./media/audio/diablo_town.ogg" type="audio/ogg" />
+                        <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
+                    </audio>
+                    <figcaption>
+                        <button id="playAudio" data-target="lecteur" style="font-size: 2rem;">
+                            <i class="bi bi-play-btn-fill"></i>
+                        </button> 
+                        <button id="pauseAudio" data-target="lecteur" style="font-size: 2rem;">
+                            <i class="bi bi-pause-btn-fill"></i>
+                        </button>
+                    </figcaption>
+                    <script>
+                        const play = document.getElementById('playAudio');
+                        const pause = document.getElementById('pauseAudio');
+                        play.addEventListener('click', function(){
+                            document.getElementById(play.dataset.target).play();
+                        });
+                        
+                        pause.addEventListener('click', function(){
+                            document.getElementById(play.dataset.target).pause();
+                        });
+                    </script>
+                </figure>
+            </article>
+        </section>
     </main>
     <footer>
         &copy; Dawan 2024

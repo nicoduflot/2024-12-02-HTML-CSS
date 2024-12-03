@@ -138,6 +138,10 @@ body {
   margin: 0;
 }
 
+h1{
+    font-size: 2rem;
+}
+
 h1,
 h2,
 h3,
@@ -146,6 +150,12 @@ h5,
 h6 {
   margin: 0;
 }
+
+img{
+    max-width: 100%;
+}
+
+
 
 /* Déclaration de classes */
 
@@ -177,6 +187,12 @@ h6 {
     position: fixed;
     right: 0.5rem;
     bottom: 0.5rem;
+}
+
+.h1{
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 /* Déclaration de structure */
@@ -222,6 +238,10 @@ body > footer {
   main section{
     display: flex;
     flex-wrap: wrap;
+  }
+
+  main section > *{
+    width: 100%;
   }
 
   main section > article{
