@@ -43,7 +43,13 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage du site)
     box-sizing: border-box;
 }
 
+body{
+    margin: 0;
+}
 
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
 
 /* Déclaration de classes */
 
@@ -70,6 +76,7 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage du site)
 }
 
 /* Décalaration de structure */
+
 
 
 /* Déclarations adaptatives */

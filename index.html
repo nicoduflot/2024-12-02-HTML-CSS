@@ -180,7 +180,83 @@ adipisicing elit.
                 <div class="border-box">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam repudiandae voluptas eveniet sed quidem sequi quae magnam rerum et quis vero harum architecto, quos quas. Dolorem amet odio non!
                 </div>
-                
+
+            </article>
+            <article>
+                <header>
+                    <h2 id="le-css-adaptatif">Le css adaptatif</h2>
+                </header>
+                <h3>Les media queries</h3>
+                <p>
+                    Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre
+                    autres, à l'affichage du site sur l'appareil.
+                </p>
+                <h3>La flexibilité : display: flex;</h3>
+                <p>
+                    Exemple d'utilisation
+                </p>
+                <style>
+                    /* css exemple display:flex; */
+                    .exemple-display-flex{
+                        border: 1px solid black;
+                        margin: 1rem;
+                        display: flex;
+                        flex-wrap: wrap;
+                        --font: 'calibri';
+                        /* pour harmoniser le css et faciliter la maintenance, il est pratique d'utiliser des variables */
+                        --gutter: 0.25rem;
+                        /* le contenu de la variable est appelé grace à la fonction var() */
+                        padding: var(--gutter);
+                        justify-content:space-between;
+                    }
+
+                    .div-flex{
+                        border: 1px solid black;
+                        font-family: var(--font);
+                        height: 75px;
+                        width: 100%;
+                        margin: var(--gutter);
+                    }
+                    /* 
+                    avec les media queries, je peux dire que quand l'affichage de l'écran atteint ou dépasse 
+                    une certaine largeur, je peux changer la  largeur de certains éléments
+                    */
+                    @media(min-width: 700px){
+                        .div-flex{
+                            width: calc(50% - (2 * var(--gutter)));
+                        }
+                    }
+                    
+                    @media(min-width: 1000px){
+                        .div-flex{
+                            width: calc(33% - (2 * var(--gutter)));
+                        }
+                    }
+                    
+                    @media(min-width: 1200px){
+                        .div-flex{
+                            width: calc(25% - (2 * var(--gutter)));
+                        }
+                    }
+                </style>
+                <div class="exemple-display-flex">
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                </div>
             </article>
         </section>
     </main>
