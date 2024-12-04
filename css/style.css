@@ -128,6 +128,8 @@ l'importation peut se faire après du commentaire MAIS AVANT TOUTES DÉCLARATION
   line-height: 1.8rem;
   --gutter-x: 0.5rem;
   --gutter-y: var(--gutter-x);
+  --general-border-color: #333;
+  --site-bg-color: white;
 }
 
 * {
@@ -154,6 +156,46 @@ h6 {
 img, video{
     max-width: 100%;
 }
+
+details{
+  border: 1px solid var(--general-border-color);
+  border-radius: var(--gutter-x);
+  padding: var(--gutter-x);
+}
+
+details > summary{
+  cursor: pointer;
+  margin: -0.5em -0.5em 0;
+  padding: var(--gutter-x);
+}
+
+details[open] summary{
+  border-bottom: 1px solid var(--general-border-color);
+}
+
+form#form-contact{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form#form-contact fieldset{
+  border: 1px solid var(--general-border-color);
+  border-radius: var(--gutter-x);
+  /*box-shadow: 0px 0px 3px var(--general-border-color);*/
+}
+
+form#form-contact fieldset legend{
+  background-color: var(--site-bg-color);
+  height: 1.3rem;
+  line-height: 1.3rem;
+  border-radius: var(--gutter-x);
+  border: 1px solid var(--general-border-color);
+  /*box-shadow: 0px 0px 3px var(--general-border-color);*/
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 
 
 
