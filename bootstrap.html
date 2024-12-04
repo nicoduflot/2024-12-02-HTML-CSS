@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Formation HTML - CSS - RWD" />
+    <title>Bootstrap - Formation HTML - CSS - RWD, &copy; DAWAN 2024</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+    <script src="./js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+    <header class="bg-dark text-white" data-bs-theme="dark">
+        <div class="container">
+            <span class="h1">Formation HTML - CSS - RWD</span><br />
+        </div>
+    </header>
+    <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="./"><i class="bi bi-house-fill"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="./" target="_self"
+                            title="Lien vers la page d'accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./media.html" target="_self"
+                            title="Les media en html">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html" target="_self"
+                            title="Les formulaires en html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./grid.html" target="_self"
+                            title="Les grilles CSS">Grilles CSS</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./bootstrap.html" target="_self"
+                            title="Le framework css Bootstrap" aria-current="page">Bootstrap</a></li>
+                    <!--
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                    -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Recherche">
+                    <button class="btn btn-outline-success" type="submit">Recherche</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <section>
+            <header>
+                <h1>Bootstrap</h1>
+            </header>
+            <article>
+                <header>
+                    <h2>Bootstrap : 12 colonnes</h2>
+                </header>
+                <div class="row">
+                    <div class="border border-dark mb-3">
+                        <p>
+                            toto
+                        </p>
+                    </div>
+                    <div class="border border-dark mb-3">
+                        <p>
+                            toto
+                        </p>
+                    </div>
+                    <div class="border border-dark col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 mb-3">
+                        <p>
+                            col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2
+                        </p>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="border border-dark col mb-3">
+                        <p>col</p>
+                    </div>
+                    <div class="border border-dark col mb-3">
+                        <p>col</p>
+                    </div>
+                    <div class="border border-dark col mb-3">
+                        <p>col</p>
+                    </div>
+                    <div class="border border-dark col mb-3">
+                        <p>col</p>
+                    </div>
+                    <div class="border border-dark col mb-3">
+                        <p>col</p>
+                    </div>
+                    <div class="border border-dark col mb-3">
+                        <p>col</p>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="border border-dark col-6 col-sm-4 col-md-3 mb-3">
+                        <p>
+                            col-6 col-sm-4 col-md-3
+                        </p>
+                    </div>
+                    <div class="border border-dark col-6 col-sm-4 col-md-3 mb-3">
+                        <p>
+                            col-6 col-sm-4 col-md-3
+                        </p>
+                    </div>
+                    <div class="border border-dark col-6 col-sm-4 col-md-3 mb-3">
+                        <p>
+                            col-6 col-sm-4 col-md-3
+                        </p>
+                    </div>
+                    <div class="border border-dark col-6 col-sm-12 col-md-3 mb-3">
+                        <p>
+                            col-6 col-sm-12 col-md-3
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="row mb-3">
+            <header>
+                <h2>Quelques composants de mise en page</h2>
+            </header>
+            <article class="col-sm-6 col-lg-3 col-xxl-4">
+                <div class="card">
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" />
+                    <div class="card-body">
+                        <h3 class="card-title">Fallout 4</h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="./" class="btn btn-primary stretched-link">Aller à l'article</a>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-6 col-lg-3 col-xxl-4">
+                <div class="card">
+                    <img src="./images/doc-signal-394w.png" class="card-img-top" style="object-fit: cover; height: 200px; object-position: left top;" />
+                    <div class="card-body">
+                        <h3 class="card-title">James White</h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="./" class="btn btn-primary stretched-link">Aller à l'article</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="bg-dark text-white" data-bs-theme="dark">
+        <div class="container">
+            &copy; Dawan 2024
+        </div>
+    </footer>
+</body>
+
+</html>
