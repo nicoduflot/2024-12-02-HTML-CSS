@@ -62,7 +62,7 @@
                         <label for="nom">Nom : </label>
                         <input type="text" name="nom" id="nom" autofocus required aria-describedby="info-nom" placeholder="Votre nom" />
                     </p>
-                    <div id="info-nom">
+                    <div class="info-form" id="info-nom">
                         Ce champ doit contenir votre nom d'usage, il est obligatoire.
                     </div>
                     <p>
@@ -70,11 +70,89 @@
                         <input type="email" name="email" id="email" required aria-describedby="info-email" placeholder="Votre email"
                         pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$" />
                     </p>
-                    <div id="info-email">
+                    <div class="info-form" id="info-email">
                         Ce champ doit contenir votre email de contact, il est obligatoire.
                     </div>
                 </fieldset>
-                <button type="submit">Envoyer</button>
+                <fieldset>
+                    <legend>
+                        Type de la demande
+                    </legend>
+                    <p>
+                        <label for="type-demande">Type de la demande</label>
+                        <select name="type-demande" id="type-demande" aria-describedby="info-type-demande" required>
+                            <option value="" selected>Choisir le type de la demande</option>
+                            <optgroup label="Options unitaires">
+                                <option value="1">Opt 1</option>
+                                <option value="2">Opt 2</option>
+                                <option value="3">Opt 3</option>
+                                <option value="4">Opt 4</option>
+                                <option value="5">Opt 5</option>
+                            </optgroup>
+                            <optgroup label="Regroupement d'options">
+                                <option value="6">Tout sauf l'option 1</option>
+                                <option value="7">Tout sauf l'option 2</option>
+                                <option value="8">Tout sauf l'option 3</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <div class="info-form" id="info-type-demande">
+                        Vous devez sélectionner le type de la demande, ce champ est obligatoire.
+                    </div>
+                    <p>
+                        Vous représentez :
+                    </p>
+                    <p class="form-check-radio">
+                        <input type="radio" name="personne" id="physique" value="physique" checked aria-describedby="info-personne" /> <label for="physique">Personne Physique</label><br />
+                        <input type="radio" name="personne" id="morale" value="morale" aria-describedby="info-personne" /> <label for="morale">Personne Morale</label>
+                    </p>
+                    <div class="info-form" id="info-personne">
+                        Votre demande est faîte pour un particulier (personne physique) ou une institution, asso, entreprise, etc(Personne Morale).
+                    </div>
+                    <p class="form-check-radio">
+                        <input type="checkbox" name="diff-email" id="diff-email" aria-describedby="info-diff" /> <label for="diff-email">Campagne d'emailing</label><br/>
+                        <input type="checkbox" name="diff-tel" id="diff-tel" aria-describedby="info-diff" /> <label for="diff-tel">Télé-opérateurs</label><br/>
+                        <input type="checkbox" name="diff-radio" id="diff-radio" aria-describedby="info-diff" /> <label for="diff-radio">Publicités radiophoniques</label><br/>
+                        <input type="checkbox" name="diff-tv" id="diff-tv" aria-describedby="info-diff" /> <label for="diff-tv">Publicités télévisuelles</label><br/>
+                    </p>
+                    <p>
+                        0 <input type="range" name="range" id="range" min="0" max="10" step="0.5" value="5" /> 10 <br />
+                        Valeur sélectionnée : <span id="rangevalue">5</span>
+                        <script>
+                            const range = document.getElementById('range');
+                            const rangevalue = document.getElementById('rangevalue');
+                            range.addEventListener('change', function(){
+                                rangevalue.innerHTML = range.value;
+                            });
+                        </script>
+                    </p>
+                    <p>
+                        <input type="color" name="color" id="color" value="#333333" /> <br />
+                        Valeur sélectionnée : <span id="colorvalue">#333333</span>
+                        <div id="selectedcolor" style="height: 1rem;background-color: #333333;"></div>
+                        <script>
+                            const color = document.getElementById('color');
+                            const colorvalue = document.getElementById('colorvalue');
+                            const selectedcolor = document.getElementById('selectedcolor');
+                            color.addEventListener('change', function(){
+                                colorvalue.innerHTML = color.value;
+                                selectedcolor.style.backgroundColor = color.value;
+                            });
+                        </script>
+                    </p>
+                    <p>
+                        <label for="message">Votre message :</label><br />
+                        <div class="video-16-9">
+                            <textarea name="message" id="message" required placeholder="Votre message ici"></textarea>
+                        </div>
+                    </p>
+                </fieldset>
+                <p>
+                    <button type="submit">Envoyer</button> 
+                    <button type="reset">Effacer les données</button> 
+                    <button type="button">Ce bouton ne fait rien</button> 
+
+                </p>
             </form>
         </article>
     </main>
