@@ -6,10 +6,11 @@
     <meta name="description" content="Formation HTML - CSS - RWD" />
     <title>Formation HTML - CSS - RWD, &copy; DAWAN 2024</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/grid.css" />
 </head>
 <body>
     <header>
-        <h1>Formation HTML - CSS - RWD</h1>
+        <span class="h1">Formation HTML - CSS - RWD</span>
     </header>
     <nav>
         <ul>
@@ -21,7 +22,115 @@
         </ul>
     </nav>
     <main>
-
+        <article>
+            <header>
+                <h1>Les grilles en CSS, display: grid;</h1>
+            </header>
+            <p>
+                La propriété <code>grid</code> permet de transformer l'élément qui la possède en une grille.
+            </p>
+            <p>
+                Il faut ensuite définir le comportement de la grille :
+            </p>
+            <ul>
+                <li>Le modèle des colonnes</li>
+                <li>Les espaces (goutières) entre les éléments de la grille</li>
+                <li>La hauteur minimale, maximale ou automatique des lignes</li>
+                <li>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS/grid" target="_blank">
+                        Plus d'information sur la définition des grilles.
+                    </a>
+                </li>
+            </ul>
+            <p>
+                On applique le display grid à <code>div class="espace-grille"</code>. Ensuite, avec
+                <code>grid-template-columns</code> on indique le nombre de fractions horizontales appliqué à
+                <code>div class="espace-grille"</code>, ici, une seule fraction (1fr => une colonne). Enfin, une
+                goutière (gap) de 0.5rem entre les éléments de la grille.
+            </p>
+            <p class="code">
+                .espace-grille{<br />
+                &nbsp;&nbsp;display: grid;<br />
+                &nbsp;&nbsp;margin: 0;<br />
+                &nbsp;&nbsp;grid-template-columns: 1fr;<br />
+                &nbsp;&nbsp;gap: 0.5rem;<br />
+                }
+            </p>
+            <div class="espace-grille">
+                <div class="grid-div col-sm-2 col-md-3 col-lg-4 col-xl-5 col-xxl-6">
+                    <h3>01</h3>
+                    <p>la div n°01</p>
+                </div>
+                <div class="grid-div line-span-2">
+                    <h3>02</h3>
+                    <p>la div n°02</p>
+                </div>
+                <div class="grid-div col-md-2 col-lg-3 col-xl-4 col-xxl-3">
+                    <h3>03</h3>
+                    <p>la div n°03</p>
+                </div>
+                <div class="grid-div col-md-2">
+                    <h3>04</h3>
+                    <p>la div n°04</p>
+                </div>
+                <div class="grid-div line-span-3">
+                    <h3>05</h3>
+                    <p>la div n°05</p>
+                </div>
+                <div class="grid-div">
+                    <h3>06</h3>
+                    <p>la div n°06</p>
+                </div>
+                <div class="grid-div">
+                    <h3>07</h3>
+                    <p>la div n°07</p>
+                </div>
+                <div class="grid-div">
+                    <h3>08</h3>
+                    <p>la div n°08</p>
+                </div>
+                <div class="grid-div">
+                    <h3>09</h3>
+                    <p>la div n°09</p>
+                </div>
+                <div class="grid-div">
+                    <h3>10</h3>
+                    <p>la div n°10</p>
+                </div>
+                <div class="grid-div">
+                    <h3>11</h3>
+                    <p>la div n°11</p>
+                </div>
+                <div class="grid-div">
+                    <h3>12</h3>
+                    <p>la div n°12</p>
+                </div>
+                <div class="grid-div">
+                    <h3>13</h3>
+                    <p>la div n°13</p>
+                </div>
+                <div class="grid-div">
+                    <h3>14</h3>
+                    <p>la div n°14</p>
+                </div>
+                <div class="grid-div col-md-2 col-lg-1">
+                    <h3>15</h3>
+                    <p>la div n°15</p>
+                </div>
+                <div class="grid-div">
+                    <h3>16</h3>
+                    <p>la div n°16</p>
+                </div>
+                <div class="grid-div">
+                    <h3>17</h3>
+                    <p>la div n°17</p>
+                </div>
+                <div class="grid-div col-md-2">
+                    <h3>18</h3>
+                    <p>la div n°18</p>
+                </div>
+            </div>
+        </article>
     </main>
     <footer>
         &copy; Dawan 2024
