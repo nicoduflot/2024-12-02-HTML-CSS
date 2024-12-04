@@ -1,3 +1,5 @@
+/* seulement grid template column */
+
 .espace-grille {
   display: grid;
   margin: 0;
@@ -15,6 +17,23 @@
 
 .line-span-3 {
   grid-row: span 3;
+}
+
+/* grid template column et grid region template */
+.grid-region{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "entete" 
+    "navigation" 
+    "toto" 
+    "contenu" 
+    "pied";
+}
+
+.grid-region > *{
+    border: 1px solid darkslategray;
 }
 
 /* Déclarations adaptatives */
@@ -39,6 +58,32 @@
 
   .col-md-3 {
     grid-column: span 3;
+  }
+
+  .grid-region{
+    grid-template-columns: 250px 1fr 50px;
+    grid-template-areas: 
+    "entete entete entete"
+    "navigation contenu toto"
+    "pied pied pied"
+    ;
+  }
+
+  #entete{
+    grid-area: entete;
+  }
+  
+  #navigation{
+    grid-area: navigation;
+  }
+  #contenu{
+    grid-area: contenu;
+  }
+  #toto{
+    grid-area: toto;
+  }
+  #pied{
+    grid-area: pied;
   }
 }
 
