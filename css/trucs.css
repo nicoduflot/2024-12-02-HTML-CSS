@@ -1,0 +1,75 @@
+.rectangle{
+    background-color: rgba(0,0,0,0.5);
+    height: 3rem;
+    line-height: 3rem;
+    width: 100px;
+    margin: 1rem;
+    padding: 0 var(--gutter-x);
+}
+
+.vertical-h{
+    transform-origin: center left;
+    transform: rotate(90deg);
+}
+
+.vertical-a-h{
+    transform-origin: center 0;
+    transform: rotate(-90deg);
+}
+
+#scale-hover{
+    /*transition: transform 0.2s, background-color 1s;*/
+    transition-property:    transform,     background-color;
+    transition-duration:    0.2s,          1s;
+    transition-delay:       0.1s;
+    transition-timing-function: linear;
+}
+
+#scale-hover:hover,
+#scale-hover:focus{
+    transform: scale(1.1);
+    background-color: red;
+}
+
+.clignotant{
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+    animation: clignoter 0.8s infinite;
+}
+
+@keyframes clignoter {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.vignette{
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--general-border-color);
+    margin: var(--gutter-x);
+    background-image: url('../images/multi-vignettes-sm-01.png');
+    border-radius: 50%;
+}
+
+.vignette-01{
+    background-position-x: 0;
+    background-position-y: 0;
+}
+.vignette-02{
+    background-position-x: 50px;
+    background-position-y: 0;
+}
+.vignette-03{
+    background-position-x: 0;
+    background-position-y: 50px;
+}
+.vignette-04{
+    background-position-x: 50px;
+    background-position-y: 50px;
+}

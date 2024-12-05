@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="./css/style.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
     <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./css/trucs.css" media="all" />
+    <link rel="stylesheet" href="./css/animate.css" media="screen" />
 </head>
-
 <body id="top">
     <header>
         <h1>Formation HTML - CSS - RWD</h1>
@@ -31,9 +32,9 @@
                 <b>Table des matières</b>
                 <ol type="I">
                     <li><a href="#svg">Les SVG</a></li>
-                    <li><a href="#">Les balises d'apparence de texte</a></li>
-                    <li><a href="#">Les problèmes courant en css</a></li>
-                    <li><a href="#">Le css adaptatif</a></li>
+                    <li><a href="#transform">Les propriétés de transformations</a></li>
+                    <li><a href="#animation">Les problèmes courant en css</a></li>
+                    <li><a href="#vignette">Les vignettes</a></li>
                     <li><a href="#">Les positions</a></li>
                 </ol>
             </aside>
@@ -46,174 +47,65 @@
                 <figure>
                     <img src="./images/no-logo-2.svg" />
                 </figure>
-                <h3>Écrire du contenu texte</h3>
-                <p>
-                    Les textes doivent toujours être encadrés par des balise qui affiche normalement du texte, comme des
-                    paragraphes, mais aussi des block de citation, des listes...
-                </p>
-                <p>
-                    Si j'enchaîne les paragraphes, ils sont séparés verticalement par leurs marges extérieures en haut
-                    et en bas.<br /> Pour ajouter un retour chariot (ou une cassure de ligne), il faut utiliser la
-                    balise <code>&lt;br /&gt;</code>
-                </p>
-                <p>
-                    Les listes sont équivalentes aux paragagraphes, car on ne peut pas les déclarer à l'intérieur d'un
-                    paragraphe.
-                </p>
-                <ul>
-                    <li>élément de liste</li>
-                    <li>élément de liste
-                        <ul>
-                            <li>élément de sous-liste</li>
-                            <li>élément de sous-liste</li>
-                            <li>élément de sous-liste
-                                <ul>
-                                    <li>élément de sous-sous-liste</li>
-                                    <li>élément de sous-sous-liste</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>élément de liste</li>
-                </ul>
-                <ol type="A">
-                    <li>élémént de liste</li>
-                    <li>élémént de liste
-                        <ol>
-                            <li>élément de sous-liste</li>
-                        </ol>
-                    </li>
-                    <li>élémént de liste</li>
-                </ol>
-                <p>
-                    maintenant blablabla, continuons la liste
-                </p>
-                <ol type="A" start="4">
-                    <li>élément de liste</li>
-                </ol>
-                <blockquote>
-                    <p>
-                        La balise <code>blockquote met en exergue, en évidence, le texte à l'intérieur</code>
-                    </p>
-                </blockquote>
-                <p>
-                    Pour ajouter de la sémantique à une citation, il est conseillé d'utiliser des balise de citation :
-                    <code>cite</code> et <code>q</code>
-                </p>
-                <blockquote>
-                    <p>
-                        <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés
-                            deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à
-                            outils de la communication.</q>
-                    </p>
-                    <p>
-                        <cite>Au guet ! (1989), Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997</cite>
-                    </p>
-                </blockquote>
-                <p>
-                    Le bloc de contenu qui suis n'est a utiliser que dans certaines situations
-                </p>
-                <pre>
-Lorem ipsum dolor 
-sit amet consectetur 
-adipisicing elit.
- d-.-b
-  \ /
-                </pre>
-                <p>
-                    Les tableaux en HTML doivent eux aussi être déclarés à l'extérieur des paragraphes.
-                </p>
-                <table border="1" cellspacing="0" cellpadding="5">
-                    <tr>
-                        <td>01</td>
-                        <td>02</td>
-                        <td>03</td>
-                    </tr>
-                </table>
+                <h3>Créer son propre SVG</h3>
+                <svg width="100%" height="10" style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+                    <polyline points="0,0 5,0 300,5 5,10 0,10" style="stroke: transparent; fill: darkred;"></polyline>
+                </svg>
+                <h4>Autre exemple</h4>
+                <svg width="300" height="200">
+                    <rect width="100%" height="100%" fill="darkred" />
+                    <circle cx="100" cy="100" r="80" fill="darkgreen" />
+                    <circle cx="200" cy="100" r="80" fill="darkviolet" />
+                    <circle cx="150" cy="100" r="80" fill="darkblack" />
+                    <text text-anchor="middle" font-size="60" x="150" y="120" fill="white" style="font-family: Impact;">no logo</text>
+                </svg>
             </article>
             <article>
                 <header>
-                    <h2 id="les-balises-d-apparence-de-texte">Les balises d'apparence de texte</h2>
+                    <h2 id="transform">Les propriétés de transformations</h2>
                 </header>
+                <div class="rectangle vertical-h">
+                    Coucou
+                </div>
+                <div class="rectangle vertical-a-h">
+                    Coucou
+                </div>
                 <p>
-                    La balise <code>font</code> permettait de faire ressortir un extrait d'un paragraphe, en changeant
-                    soit <font face="Impact">la police de caratère utilisée</font>, <font size="6">la taille de la
-                        police</font>, et sa <font color="#0000ff">couleur d'écriture</font>, en <font face="Impact"
-                        size="6" color="#0000ff">pouvant tout cumuler</font>, elle est désormais déprécié, mais est
-                    encore interprêtée par la plupart des navigateurs.
+                    Les transformations peuvent être utilisées avec les transitions. Par exemple, dans l'état d'origine on indique une transition, sont type (transform par exemple) et dans un état donné (hover) on applique la transformation.
                 </p>
-                <style>
-                    .rouge-gras {
-                        font-weight: bold;
-                        color: red;
-                    }
-                </style>
+                <div class="rectangle" id="scale-hover">Coucou</div>
+            </article>
+            <article>
+                <header>
+                    <h2>Les animations</h2>
+                </header>
+                <h3 class="animate__animated animate__bounce animate__animated animate__infinite">Animate Css</h3>
                 <p>
-                    On utilisera plutôt une classe CSS associée à une balise <code>span</code>. <span
-                        class="rouge-gras">Rouge gras</span> utilise une span et la classe .rouge-gras
+                    Animate CSS est une bibliothèque de d'animation CSS prêtes à l'emploi. On récupère le CSS, on le lie à la page d'usage, ensuite, on lit la doc pour ajouter aux éléments a animer les classe CSS nécessaires.
                 </p>
+                <h3>Faire ses animations</h3>
                 <p>
-                    Une surface de 45m<sup>2</sup>, pour un volume de 250m<sup>3</sup>.<br />
-                    Les user stories doivent être INVEST.<sub>abbrev.</sub><br />
-                    H<sup>2</sup>SO<sub>4</sub><sup>2-</sup>
-                </p>
-                <p>
-                    Il est possible de réduire la taille d'un espace de texte sans utiliser la balise
-                    <small>font</small>
+                    Pour faire ses animations, on utilise la proriété CSS animation, qui possède des "sous-propriétés".
+                    On règle la durée, le style, etc. de l'animation, on indique ensuite le nom du lot d'images clef, c'est à dire l'animation en elle même.
                 </p>
                 <p>
-                    Pour mettre en gras un élément, on utilise la balise <code><b>b</b></code> (qui n'a aucun impact sur
-                    le SEO), mais la plupart des CMS, utiliseront la balise <code><strong>strong</strong></code> qui
-                    elle a un impacte SEO, insistant sur la valeur sémantique du terme par rapport au contexte.
-                </p>
-                <p>
-                    Il en est de même pour l'italique <code><i>i</i></code>, qui de base n'ajoute pas d'important au
-                    SEO, elle sera par défaut remplacée par <code><em>em</em></code> (emphase) dans les CMS, et
-                    <code>em</code> ajoute de l'important en SEO.
-                </p>
-                <p>
-                    Comme le HTML était destiné à l'impression en direct, il était possible de <u>souligner</u> du
-                    texte, mais en pratique on ne le fait pas, car par défaut les liens sont souligner et on pour croire
-                    qu'un texte souligné est un lien qui ne fonctionne pas. Il est aussi possible de <s>biffer</s>, ou
-                    <mark>surligner au marqueur fluo</mark>.
+                    <i class="bi bi-telephone-fill clignotant"></i>
                 </p>
             </article>
             <article>
                 <header>
-                    <h2 id="les-problemes-courant-en-css">Les problèmes courant en css</h2>
+                    <h2 id="vignette">Les vignettes</h2>
                 </header>
-                <h3>Les polices a empatement</h3>
+                <h3>le principe du "sprite"</h3>
                 <p>
-                    En web, pour l'accessibilité et la facilité de lecture, on évite les polices dites <q>à
-                        empatement</q> (Times New Roman, verdana, serif) on préfèrera les polices sans empatement, car
-                    plus faciles à lire surtout sur des écrans (Arial, helvetica, Roboto ou sans-serif).
+                    Utiliser une image qui est en fait une composition de plusieurs images, de même dimension, l'image est appelée en image de fond d'un élément, et on indique des coordonnées pour sélectionner, selon une classe, une des images qui compose l'image principale.
                 </p>
-                <p>
-                    De plus, pour rendre les texte encore plus accessibles, il convient d'augmenter la taille de base de
-                    la police de caractère et d'augmenter l'interligne.
-                </p>
-                <div class="deuxEm">
-                    deux em
-                    <div class="deuxEm">
-                        deux em
-                    </div>
+                <div style="display: flex; flex-wrap: wrap; justify-content: flex-start;">
+                    <div class="vignette vignette-01"></div>
+                    <div class="vignette vignette-02"></div>
+                    <div class="vignette vignette-03"></div>
+                    <div class="vignette vignette-04"></div>
                 </div>
-                <div class="deuxRem">
-                    deux rem
-                    <div class="deuxRem">
-                        deux rem
-                    </div>
-                </div>
-                <h3>Les tailles des boîtes</h3>
-                <div class="content-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam repudiandae voluptas eveniet
-                    sed quidem sequi quae magnam rerum et quis vero harum architecto, quos quas. Dolorem amet odio non!
-                </div>
-                <div class="border-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam repudiandae voluptas eveniet
-                    sed quidem sequi quae magnam rerum et quis vero harum architecto, quos quas. Dolorem amet odio non!
-                </div>
-
             </article>
         </section>
         <article>
