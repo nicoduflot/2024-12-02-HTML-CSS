@@ -1,0 +1,8 @@
+.carousel figure > *{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bg-dark-50{
+    background-color: rgba(33, 37, 41, 0.5);
+}

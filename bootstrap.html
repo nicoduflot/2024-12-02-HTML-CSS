@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <link rel="stylesheet" href="./css/bootstrap-icons.css" />
     <script src="./js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./css/bs-style.css" />
 </head>
 
 <body>
@@ -138,7 +139,8 @@
             </header>
             <article class="col-sm-6 col-lg-3 col-xxl-4">
                 <div class="card">
-                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" />
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="card-img-top"
+                        style="object-fit: cover; height: 200px;" />
                     <div class="card-body">
                         <h3 class="card-title">Fallout 4</h3>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
@@ -149,13 +151,129 @@
             </article>
             <article class="col-sm-6 col-lg-3 col-xxl-4">
                 <div class="card">
-                    <img src="./images/doc-signal-394w.png" class="card-img-top" style="object-fit: cover; height: 200px; object-position: left top;" />
+                    <img src="./images/doc-signal-394w.png" class="object-fit-cover card-img-top"
+                        style="height: 200px; object-position: left top;" />
                     <div class="card-body">
                         <h3 class="card-title">James White</h3>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="./" class="btn btn-primary stretched-link">Aller à l'article</a>
+                        <a href="#" class="btn btn-primary stretched-link" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Aller à l'article</a>
                     </div>
+                </div>
+            </article>
+            <article class="col-lg-6 col-xxl-4">
+                <header>
+                    <h3>Les tableaux</h3>
+                </header>
+                <table class="table table-dark table-striped table-hover  caption-top">
+                    <caption>
+                        Ce que j'écoute en ce moment
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Cover</th>
+                            <th>Groupe</th>
+                            <th>Album</th>
+                            <th>Année de sortie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                                        src="./images/albums/nirvana-nevermind-cover.jpg" class="img-thumbnail"
+                                        width="200" /></a>
+                            </td>
+                            <td>Nirvana</td>
+                            <td>Nevermind</td>
+                            <td>1991</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/albums/alice-phoebe-lou-glow-cover.jpg" class="img-thumbnail"
+                                    width="200" /></td>
+                            <td>Alice Phoebe Lou</td>
+                            <td>Glow</td>
+                            <td>2021</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/albums/Angra_angels_cry.jpg" class="img-thumbnail" width="200" />
+                            </td>
+                            <td>Angra</td>
+                            <td>Angels Cry</td>
+                            <td>1993</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/albums/radiohead-the-bends-cover.jpg" class="img-thumbnail"
+                                    width="200" /></td>
+                            <td>Radiohead</td>
+                            <td>The bends</td>
+                            <td>1995</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/albums/florence-and-the-machine-dance-fever.jpg"
+                                    class="img-thumbnail" width="200" /></td>
+                            <td>Florence</td>
+                            <td>Dance and the machine</td>
+                            <td>2022</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Cover</th>
+                            <th>Groupe</th>
+                            <th>Album</th>
+                            <th>Année de sortie</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+            <article class="col-12">
+                <header>
+                    <h3>Des photos</h3>
+                </header>
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner ratio ratio-21x9 bg-dark">
+                        <figure class="carousel-item active">
+                            <img src="./images/doc-signal-394w.png" class="d-block img-fluid " alt="...">
+                            <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="carousel-item">
+                            <img src="./images/james-white-composite-800w.png" class="d-block img-fluid " alt="...">
+                            <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="carousel-item">
+                            <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="d-block img-fluid " alt="...">
+                            <figcaption class="carousel-caption d-none d-md-block bg-dark-50">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </article>
         </section>
@@ -165,6 +283,23 @@
             &copy; Dawan 2024
         </div>
     </footer>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
