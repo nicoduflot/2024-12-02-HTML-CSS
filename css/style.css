@@ -131,7 +131,11 @@ l'importation peut se faire après du commentaire MAIS AVANT TOUTES DÉCLARATION
   --gutter-x: 0.5rem;
   --gutter-y: var(--gutter-x);
   --general-border-color: #333;
+  --nav-link-border-color: #a0a0a0;
+  --header-bg-color: #333;
   --site-bg-color: white;
+  --link-nav-color: white;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -294,6 +298,48 @@ body > footer {
   margin-right: auto;
 }
 
+body > header,
+body > nav,
+body > footer{
+  background-color: var(--header-bg-color);
+  color: var(--link-nav-color);
+}
+
+body > header{
+  padding: calc(var(--gutter-x) * 2) var(--gutter-x);
+}
+body > nav{
+  padding-left: unset;
+  padding-right: unset;
+}
+
+body > nav ul{
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+body > nav ul li{
+  border-top: 1px solid var(--nav-link-border-color);
+}
+
+body > nav a,
+body > nav a:visited{
+  color: var(--link-nav-color);
+  text-decoration: none;
+  display: block;
+  padding-left: var(--gutter-x);
+  padding-right: var(--gutter-x);
+}
+
+body > nav a:hover,
+body > nav a:focus
+{
+  color: var(--header-bg-color);
+  background-color: var(--link-nav-color);
+  outline: none;
+}
+
 /* Déclarations adaptatives */
 @media (min-width: 576px) {
   body > header,
@@ -311,6 +357,21 @@ body > footer {
   body > footer {
     max-width: 720px;
   }
+
+  body > nav ul{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  body > nav ul li{
+    border-top: unset;
+    /*border-right: 1px solid var(--nav-link-border-color);*/
+  }
+  /*
+  body > nav ul li:last-child{
+    border-right: unset;
+  }
+  */
 }
 
 @media (min-width: 992px) {
