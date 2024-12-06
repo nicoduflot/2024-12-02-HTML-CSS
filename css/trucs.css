@@ -73,3 +73,105 @@
     background-position-x: 50px;
     background-position-y: 50px;
 }
+
+.ecusson{
+    position: relative;
+    width: 338px;
+    height: 338px;
+    margin: 1rem 0;
+}
+
+.bg, .mg, .fg, .text-fg, .effect{
+    position: absolute;
+}
+
+.fg img{
+    width: 238px;
+    height: 238px;
+    object-fit: contain;
+    margin-top: 50px;
+    margin-left: 35px;
+}
+
+.effect{
+    width: 338px;
+    height: 338px;
+    border-radius: 50%;
+    border: 10px solid var(--general-border-color);
+    background: radial-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.8));
+}
+
+.text-fg{
+    font-size: 4rem;
+    width: 338px;
+    height: 338px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 0 10px darkblue;
+}
+
+.triangle-right{
+    height: 0;
+    width: 0;
+    --h-t: 2rem;
+    --b-t-w: calc(var(--h-t) / 2);
+    --b-b-w: calc(var(--h-t) / 2);
+    --b-l-w: calc(var(--h-t) * 0.866);
+    border-top-width: var(--b-t-w);
+    border-bottom-width: var(--b-b-w);
+    border-left-width: var(--b-l-w);
+    border-right-width: 0;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.left-darkred{
+    border-left-color: darkred;
+}
+
+.tr-1rem{
+    --h-t: 1rem;
+}
+
+article p:first-of-type::before{
+    content: "";
+    display: inline-block;
+    height: 0;
+    width: 0;
+    --h-t: 0.8rem;
+    --b-t-w: calc(var(--h-t) / 2);
+    --b-b-w: calc(var(--h-t) / 2);
+    --b-l-w: calc(var(--h-t) * 0.866);
+    border-top-width: var(--b-t-w);
+    border-bottom-width: var(--b-b-w);
+    border-left-width: var(--b-l-w);
+    border-right-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-left-color: darkred;
+}
+
+.badge{
+    width: 200px;
+    height: 200px;
+    margin: 1rem;
+    /*
+        background est une propriété raccourcie
+        background-color, background-size, background-repeat, background-position, background-image
+    */
+    background: 
+        radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.8)), 
+        url('../images/pip-boy-boy.png');
+    background-color: darkred;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: cadetblue;
+    box-shadow: 1px 1px 10px 2px black;
+}

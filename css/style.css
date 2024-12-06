@@ -132,9 +132,14 @@ l'importation peut se faire après du commentaire MAIS AVANT TOUTES DÉCLARATION
   --gutter-y: var(--gutter-x);
   --general-border-color: #333;
   --nav-link-border-color: #a0a0a0;
+  --general-link-color: rgb(164, 44, 0);
   --header-bg-color: #333;
   --site-bg-color: white;
   --link-nav-color: white;
+  --info-border-color: rgb(16, 89, 215);
+  --info-bg-color: rgb(129, 201, 237);
+  --danger-border-color: rgb(215, 16, 16);
+  --danger-bg-color: rgb(237, 129, 129);
   scroll-behavior: smooth;
 }
 
@@ -157,6 +162,15 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+a, a:visited{
+  color: var(--general-link-color);
+  text-decoration: none;
+}
+
+a:hover:not(body > nav a:hover){
+  text-decoration: underline;
 }
 
 img, video{
@@ -283,6 +297,37 @@ form#form-contact textarea{
     top:0px; 
     overflow:hidden; 
     border:none;
+}
+
+.info-form{
+  font-size: 0.8rem;
+  padding: var(--gutter-x);
+  border: 2px solid var(--info-border-color);
+  border-radius: calc(2*var(--gutter-x));
+  background-color: var(--info-bg-color);
+}
+
+.info-form::before{
+  display: inline-block;
+  font-family: bootstrap-icons;
+  content: '\f430';
+  font-size: 1rem;
+}
+
+.danger-form{
+  font-size: 0.8rem;
+  padding: var(--gutter-x);
+  border: 2px solid var(--danger-border-color);
+  border-radius: calc(2*var(--gutter-x));
+  background-color: var(--danger-bg-color);
+}
+
+.danger-form::before{
+  display: inline-block;
+  font-family: bootstrap-icons;
+  content: '\F334';
+  font-size: 1rem;
+  animation: clignoter 0.7s infinite;
 }
 
 /* Déclaration de structure */
