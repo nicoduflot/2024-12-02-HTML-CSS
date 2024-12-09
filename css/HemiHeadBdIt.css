@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'HemiHeadBdIt';
+    src: url('fonts/HemiHeadBdIt.eot');
+    src: url('fonts/HemiHeadBdIt.eot') format('embedded-opentype'),
+         url('fonts/HemiHeadBdIt.woff2') format('woff2'),
+         url('fonts/HemiHeadBdIt.woff') format('woff'),
+         url('fonts/HemiHeadBdIt.ttf') format('truetype'),
+         url('fonts/HemiHeadBdIt.svg#HemiHeadBdIt') format('svg');
+}

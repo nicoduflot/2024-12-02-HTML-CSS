@@ -4,8 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercice Formation HTML - CSS - RWD, &copy; DAWAN 2024</title>
+    <link rel="stylesheet" href="./css/exo.css" media="screen" />
+    <link rel="stylesheet" href="./css/exo-print.css" media="print" />
 </head>
-<body>
-    
+<body class="grid-region" id="top">
+    <header id="entete">
+        <h1>Follow the white rabbit</h1><img src="./images/white-rabbit-01.svg" id="img-header" />
+    </header>
+    <nav id="navigation">
+        <ul>
+            <li><a href="#univers">L'univers</a></li>
+            <li><a href="#creation">Créer un personnage</a></li>
+            <li><a href="#regles">Les règles</a></li>
+            <li><a href="#bagarre">Bagarre réelle</a></li>
+            <li><a href="#cyberspace">Cyberspace</a></li>
+        </ul>
+    </nav>
+    <main id="contenu">
+        <header>
+            <h2>Alice dans le cyberpunk</h2>
+        </header>
+        <section>
+            <article>
+                <header>
+                    <h3 id="univers">L'univers</h3>
+                </header>
+                <p>
+                    Dans une dystopie des années 2000, vous faîtes partie de la communauté des hackers. Aucun serveur, aucune protection ne vous arrête. Vous et votre groupe, vous prennez des doses d'adrénaline en vous introduisant dans les mainframes les plus sécurisées, via vos implants cyberlink. Tous ce passait plutôt bien jusqu'au jours où un de vos camarade a été arrêté et mis en cyber-quarantaine, nourri par des tubes et son cyberlink branché à la prison numérique la plus sécurisée du monde.
+                </p>
+                <p>
+                    Vous vous retrouvez en cavale, avec un modem portable, quelques Newros en poche, et l'adresse d'un bar où vous êtes sensé retrouver le reste de votre groupe, le réseau étant sûrement à la recherche de votre empreinte cyber.
+                </p>
+                <div class="video-16-9">
+                    <iframe src="https://www.youtube.com/embed/ZEWGVlwC1Dk?si=nAskbvOzuNsgIG2L"></iframe>
+                </div>
+            </article>
+            <article>
+                <header>
+                    <h3 id="creation">Créer un personnage</h3>
+                </header>
+                <p>
+                    Il vous faut trouver un nom pour votre personnage, son pseudo de hacker, son age, ses pronoms son l'exploit numérique le plus marquant.
+                </p>
+                <p>
+                    Il faut le nom de votre petit groupe, comment ses membres se sont rencontrés, chaque personne autour de la table explique quelle est sa relation avec la personne à sa gauche.
+                </p>
+                <p>
+                    Un personnage possède 7 compétences. il ya 7 points a répartir entre les compétences, minimum 0, maximum 3.
+                </p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Compétence</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <th>Penser</th>
+                            <td>percevoir, analyser, réparer</td>
+                        </tr>
+                        <tr>
+                            <th>Influencer</th>
+                            <td>charmer, manipuler, intimider</td>
+                        </tr>
+                        <tr>
+                            <th>Sprinter</th>
+                            <td>courir, sauter, grimper</td>
+                        </tr>
+                        <tr>
+                            <th>Infiltrer</th>
+                            <td>se cacher, rôder, chercher</td>
+                        </tr>
+                        <tr>
+                            <th>Bagarrer</th>
+                            <td>casser, bouger, forcer, taper</td>
+                        </tr>
+                        <tr>
+                            <th>Tirer</th>
+                            <td>pister, lancer, tirer</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Un personnage possède également un sac à dos avec :
+                </p>
+                <ul>
+                    <li>Un modem sans fil portable, permettant de voler des points d'accès sans fils en offrant une protection d'une durée en minutes égal à son score en (Infiltrer) x 10 avant dêtre repéré (10 si la compétence est à 0).</li>
+                    <li>Son score en (Influencer ) x 50 Newros (10 si la compétence est à 0), la monnaie courante</li>
+                    <li>Un moyen de se défendre facilement dissimulable, comme un couteau à cran d'arrêt, un poing américain, une clef anglaise</li>
+                    <li>Puis, un élément suivant au choix : 
+                        <ul>
+                            <li>Kit d'électricien (avantage au jet de réparation d'électronique - d'électricité [Penser])</li>
+                            <li>Un burner phone et un lot de carte sim a usage unique</li>
+                            <li>Une pince monseigneur</li>
+                            <li>Un kit de serrurier</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <header>
+                    <h3 id="regles">Les règles</h3>
+                </header>
+                <h4>Jouer le jeu</h4>
+                <p>
+                    Une personne sera le·a meneur·euse de jeu (MJ), les autres seront les personnages joueur·euse·s (PJ).
+                </p>
+                <ul>
+                    <li>
+                        MJ : dirigez l’histoire, mettez le groupe à l’épreuve. Soyez fan de vos joueurs. Posez-leur des questions, remplissez le monde avec leurs  réponses. Si ça a l’air cool, laissez-les essayer de faire des actions complexes en leur donnant plusieurs tests à faire.
+                    </li>
+                    <li>
+                        PJ : Racontez ce que fait votre personnage. Faites des tests quand la situation est risquée. Donnez à chacun - chacune leur moment pour  briller. Remplissez le monde de vos idées. Prenez des risques et relevez-vous de vos échecs.
+                    </li>
+                </ul>
+
+                <h4>Actions de jeu</h4>
+                <p>
+                    Quand il y a un challenge à surmonter, vous faites un test pour voir comment ça se passe pour vous. 
+                    Vous ne faites des tests que si ce que vous faites est risqué. 
+                    Le / la MJ vous indique le risque, ensuite vous choisissez une compétence, et vous lancez deux dés à six faces  plus la valeur de la compétence.
+                </p>
+                <p>
+                    Comment interpréter le résultat :  
+                </p>
+                <ul>
+                    <li>2 - 6 : NON ET, L'action est ratée et le personnage aura un désavantage à son prochain lancé de dés</li>
+                    <li>7 - 9 : OUI MAIS,L'action est réussie mais le personnage aura un désavantage à son prochain lancé de dés</li>
+                    <li>10 - 12  : OUI, l'action est réussie</li>
+                    <li>13 + : OUI ET, l'action est réussie et le personnage gagne un avantage</li>
+                </ul>
+                <h4>Avantage et désavantage</h4>
+                <p>
+                    Avoir l'avantage ou un d'savantage signifie que lorsque qu'un joueur fait le jet de dé, il lance trois dés et soit prends les deux meilleurs scores pour l'avantage ou les deux plus bas pour un désavantage.
+                </p>
+                <p>
+                    Si un personnage récupère plusieurs fois des avantages, il ne peut en utiliser qu'un à la fois et chaque avantage utilisé est décompté. Il utilise ses avantage dès qu'il en a besoin.
+                </p>
+                <p>
+                    Sur un lancer de dés, un avantage peut être utilisé pour annuler un désavantage, mais un second avantage ne pourra pas être utilisé sur ce même jet de dés.
+                </p>
+                <p>
+                    Un joueur peut aussi avoir un avantage ou un désavantage selon le contexte, à la discrétion du meneur de jeu.
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h3 id="bagarre">Bagarre réelle</h3>
+                </header>
+                <p>
+                    Les personnages ne sont généralement pas des personnes faîtes pour la confrontation, en revanche, leurs compétences Bagarrer et Tirer devront parfois être utilisées pour résoudre des affrontements physiques, à armes blanches ou à feu.
+                </p>
+                <h4>Corps à corps</h4>
+                <p>
+                    Lors d'un corps à corps, les combattants lancent des jets de dés en opposition. Le score le plus haut remporte la passe d'arme et l'issue en est déterminée ensuite.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, modi!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, modi!
+                </p>
+            </article>
+        </section>
+        <article>
+            <header>
+                <h3 id="cyberspace">Cyberspace</h3>
+            </header>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto voluptatum in quos consequatur suscipit assumenda at, ratione rem vitae doloribus repellendus vel velit. Nam explicabo asperiores soluta sed voluptate!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, corrupti hic accusamus asperiores ducimus harum molestiae aspernatur sint omnis cum. Eius totam rem unde maiores, porro reiciendis quia dignissimos doloremque.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, non aspernatur rerum officiis incidunt consequuntur adipisci placeat voluptates nesciunt a, cupiditate reiciendis atque hic deleniti natus accusantium dolorem commodi perspiciatis!
+            </p>
+        </article>
+    </main>
+    <footer id="pied">
+        &copy; Heart Of Pulp Games - 2024 - A cyberpunk company
+    </footer>
+    <div class="go-top">
+        <a href="#top" title="revenir en haut">
+            <i class="bi bi-arrow-up-square"></i>
+        </a>
+    </div>
 </body>
 </html>

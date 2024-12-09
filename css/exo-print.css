@@ -1,0 +1,64 @@
+@import url("./bootstrap-icons.css");
+@import url("./new_browserlink.css");
+@import url("./HemiHeadBdIt.css");
+
+:root {
+    --font-family: "Courier New", Courier, monospace;
+    font-family: var(--font-family);
+    --font-size: 1.1rem;
+    font-size: var(--font-size);
+    --heading-font: "new_browserlink";
+    --gutter-x: 0.5rem;
+    --gutter-y: var(--gutter-x);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    border: 1px solid black;
+    padding: var(--gutter-x);
+}
+
+table th {
+    text-align: left;
+}
+
+table td {
+    text-align: left;
+}
+
+#navigation,
+.go-top,
+.video-16-9 {
+    display: none;
+}
+
+#entete {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#entete img {
+    max-width: 60px;
+}
+
+#entete h1 {
+    width: calc(100% - 60px);
+}
+
+#img-header{
+    background-color: black;
+}
